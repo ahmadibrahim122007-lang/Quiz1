@@ -1,26 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main() {
-    int n;
-    float cost, discountedCost, totalRevenue = 0;
-
-    cout << "Enter number of houses: ";
+int main()
+ {
+    int n , i;
+    float fees, finalfees;
+ cout << "Enter number of patients: ";
     cin >> n;
 
-    for(int i = 1; i <= n; i++) {
-        cout << "Enter cost for house " << i << ": ";
-        cin >> cost;
-        if(cost > 2200) {
-            discountedCost = cost - (cost * 0.10);  // 10% discount
-        } else {
-            discountedCost = cost;
-        }
-        totalRevenue += discountedCost;
-        cout << "Discounted cost for house " << i << ": " 
-             << discountedCost << endl;
-    }
+    for ( i = 1; i <= n; i++) 
+    {
+        cout << "Enter fees for patient " << i << ": ";
+        cin >> fees;
 
-    cout << "\nTotal Revenue from all houses = " << totalRevenue << endl;
+        if (fees > 2500)
+         {
+            finalfees = fees - (fees * 0.06);
+        } 
+        else 
+        {
+            finalfees= fees;
+        }
+
+        cout << "finalfees for patient  " << i<<":"<<finalfees<<endl; 
+            
+    }
 
     return 0;
 }
